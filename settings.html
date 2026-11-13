@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="color-scheme" content="light dark"><script>(function(){try{var d=localStorage.getItem('bobasip_theme')==='dark';if(d){document.documentElement.classList.add('dark');document.documentElement.style.backgroundColor='#1E1915';}else{document.documentElement.style.backgroundColor='#faf5ec';}}catch(e){}})();</script>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>App Settings — BobaSip</title>
+  <link rel="icon" type="image/png" href="/images/bobasip-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=57" />
+</head>
+<body data-page="settings" class="user-shell-page bg-cream text-ink font-sans min-h-screen antialiased flex">
+  <div class="fixed inset-0 -z-10 bg-decor" aria-hidden="true"></div>
+  <div class="fixed inset-0 -z-10 grain" aria-hidden="true"></div>
+  <aside class="app-sidebar">
+    <a href="welcome.html" class="flex items-center gap-2 font-display font-extrabold text-4xl text-ink mb-6">
+      <img src="images/bobasip-logo.png" alt="BobaSip Logo" class="w-16 h-16 object-contain logo-adaptive" />
+      <span>Boba<span class="text-accent">Sip</span></span>
+    </a>
+    <nav class="flex flex-col gap-1 flex-1 overflow-y-auto">
+      <a href="home.html" data-nav="home" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-bold text-ink-soft hover:bg-brown/10 hover:text-brown transition"><i data-lucide="home" class="w-5 h-5"></i> Home</a>
+      <a href="menu.html" data-nav="menu" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-bold text-ink-soft hover:bg-brown/10 hover:text-brown transition"><i data-lucide="cup-soda" class="w-5 h-5"></i> Menu</a>
+      <a href="cart.html" data-nav="cart" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-bold text-ink-soft hover:bg-brown/10 hover:text-brown transition"><i data-lucide="shopping-cart" class="w-5 h-5"></i> Cart</a>
+      <a href="profile.html" data-nav="profile" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-bold text-ink-soft hover:bg-brown/10 hover:text-brown transition"><i data-lucide="user" class="w-5 h-5"></i> Profile</a>
+      <a href="orders.html" data-nav="orders" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-bold text-ink-soft hover:bg-brown/10 hover:text-brown transition"><i data-lucide="receipt" class="w-5 h-5"></i> Orders</a>
+      <a href="addresses.html" data-nav="addresses" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-bold text-ink-soft hover:bg-brown/10 hover:text-brown transition"><i data-lucide="map-pin" class="w-5 h-5"></i> Addresses</a>
+      <a href="payments.html" data-nav="payments" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-bold text-ink-soft hover:bg-brown/10 hover:text-brown transition"><i data-lucide="credit-card" class="w-5 h-5"></i> Payments</a>
+      <a href="notifications.html" data-nav="notifications" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-bold text-ink-soft hover:bg-brown/10 hover:text-brown transition"><i data-lucide="bell" class="w-5 h-5"></i> Notifications</a>
+      <a href="settings.html" data-nav="settings" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-bold text-ink-soft hover:bg-brown/10 hover:text-brown transition"><i data-lucide="settings" class="w-5 h-5"></i> Settings</a>
+    </nav>
+    <a href="profile.html" class="sidebar-profile">
+      <span data-user-avatar class="w-8 h-8 rounded-full bg-brown text-white flex items-center justify-center font-extrabold text-xs">G</span>
+      <div class="flex-1 min-w-0">
+        <div data-user-name-nav class="font-bold text-sm truncate">Guest</div>
+        <div data-i18n="View profile" class="text-[11px] text-ink-muted font-semibold">View profile</div>
+      </div>
+    </a>
+  </aside>
+  <main class="flex-1 max-w-3xl mx-auto px-4 sm:px-6 py-6 pb-10 space-y-5">
+    <div class="flex items-start gap-3">
+      <button type="button" data-admin-sidebar-toggle class="admin-mobile-toggle" aria-label="Open navigation" aria-expanded="false"><i data-lucide="menu" class="w-5 h-5"></i></button>
+      <div>
+        <h1 data-i18n="App Settings" class="font-display text-2xl sm:text-3xl font-extrabold">App Settings</h1>
+        <p data-i18n="Customize your BobaSip experience" class="text-ink-muted font-semibold text-sm">Customize your BobaSip experience</p>
+      </div>
+    </div>
+    <div class="bg-white/70 backdrop-blur border border-white/60 rounded-2xl p-5 shadow-card space-y-4">
+      <h3 data-i18n="Appearance" class="font-display text-lg font-extrabold">Appearance</h3>
+      <div class="flex items-center justify-between">
+        <div><div data-i18n="Theme" class="font-bold">Theme</div><div data-i18n="Light / Dark mode" class="text-xs text-ink-muted font-semibold">Light / Dark mode</div></div>
+        <button type="button" id="themeToggle" class="px-4 py-2 rounded-xl bg-brown/10 text-brown font-bold text-sm hover:bg-brown/20 transition flex items-center gap-2"><i data-lucide="moon" class="w-4 h-4"></i> Dark mode</button>
+      </div>
+    </div>
+    <div class="bg-white/70 backdrop-blur border border-white/60 rounded-2xl p-5 shadow-card space-y-4">
+      <h3 data-i18n="Preferences" class="font-display text-lg font-extrabold">Preferences</h3>
+      <div class="flex items-center justify-between gap-4">
+        <div><div data-i18n="Language" class="font-bold">Language</div><div data-i18n="App display language" class="text-xs text-ink-muted font-semibold">App display language</div></div>
+        <select data-setting="lang" class="px-3 py-2 rounded-xl border border-ink/15 bg-white dark:bg-cream-2 text-ink font-semibold text-sm">
+          <option>English</option><option>Filipino</option>
+        </select>
+      </div>
+      <div class="flex items-center justify-between gap-4">
+        <div><div data-i18n="Currency" class="font-bold">Currency</div><div data-i18n="Price display" class="text-xs text-ink-muted font-semibold">Price display</div></div>
+        <select data-setting="currency" class="px-3 py-2 rounded-xl border border-ink/15 bg-white dark:bg-cream-2 text-ink font-semibold text-sm">
+          <option>PHP (₱)</option>
+        </select>
+      </div>
+      <div class="flex items-center justify-between gap-3">
+        <div><div data-i18n="Sound effects" class="font-bold">Sound effects</div><div data-i18n="UI sounds" class="text-xs text-ink-muted font-semibold">UI sounds</div></div>
+        <div data-toggle="sound" class="w-11 h-6 rounded-full bg-accent relative cursor-pointer flex-shrink-0"><div class="absolute right-0.5 top-0.5 w-5 h-5 rounded-full bg-white shadow transition-all"></div></div>
+      </div>
+    </div>
+    <div class="bg-white/70 backdrop-blur border border-white/60 rounded-2xl p-5 shadow-card space-y-3">
+      <h3 data-i18n="Data" class="font-display text-lg font-extrabold">Data</h3>
+      <button type="button" id="clearCartData" data-i18n="Clear cart" class="w-full flex items-center justify-between px-4 py-3 rounded-xl bg-brown/8 text-brown font-bold text-sm hover:bg-brown/15 transition">Clear cart <i data-lucide="chevron-right" class="w-4 h-4"></i></button>
+      <button type="button" id="clearAppData" data-i18n="Clear local app data" class="w-full flex items-center justify-between px-4 py-3 rounded-xl bg-red-50 text-red-600 font-bold text-sm hover:bg-red-100 transition">Clear local app data <i data-lucide="chevron-right" class="w-4 h-4"></i></button>
+    </div>
+    <div class="bg-white/70 backdrop-blur border border-white/60 rounded-2xl p-5 shadow-card">
+      <h3 data-i18n="About" class="font-display text-lg font-extrabold mb-3">About</h3>
+      <div class="text-sm font-semibold text-ink-soft space-y-1">
+        <div>BobaSip v1.0.0</div>
+        <div data-i18n="Milktea Ordering & Shop Management">Milktea Ordering & Shop Management</div>
+        <div data-i18n="BSIT 3I · First Semester A.Y. 2025-2026" class="text-ink-muted">BSIT 3I · First Semester A.Y. 2025-2026</div>
+      </div>
+    </div>
+    <div data-logout>
+      <div class="flex items-center justify-between px-4 py-3.5 bg-white/70 backdrop-blur border border-white/60 rounded-xl font-bold hover:bg-red-50 transition cursor-pointer"><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-xl bg-red-100 text-red-600 flex items-center justify-center"><i data-lucide="log-out" class="w-4 h-4"></i></div><span data-i18n="LOG OUT" class="text-red-600">LOG OUT</span></div><i data-lucide="chevron-right" class="w-4 h-4 text-ink-muted"></i></div>
+    </div>
+  </main>
+  <div class="toast fixed bottom-24 left-1/2 -translate-x-1/2 translate-y-5 bg-brown-dark text-white px-5 py-3 rounded-full font-bold text-sm opacity-0 transition-all duration-300 z-[60] pointer-events-none shadow-soft"></div>
+  <script src="https://unpkg.com/lucide@0.383.0/dist/umd/lucide.min.js"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/main.js?v=153"></script>
+</body>
+</html>
+
+
+
+
+
+
+

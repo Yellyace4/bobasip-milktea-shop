@@ -1,0 +1,13 @@
+# Exclude local artifacts and secret env files from Vercel deployment.
+# Keep .env.example (no real secrets) and js/supabase-config.js (browser-safe anon config) deployable.
+.vercel
+node_modules
+*.pdf
+err.txt
+README.md
+.env
+.env.local
+.env*.local
+.env.development
+.env.production
+.env.test

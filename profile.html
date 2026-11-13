@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="color-scheme" content="light dark"><script>(function(){try{var d=localStorage.getItem('bobasip_theme')==='dark';if(d){document.documentElement.classList.add('dark');document.documentElement.style.backgroundColor='#1E1915';}else{document.documentElement.style.backgroundColor='#faf5ec';}}catch(e){}})();</script>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile — BobaSip</title>
+  <link rel="icon" type="image/png" href="/images/bobasip-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=57" />
+</head>
+<body data-page="profile" class="user-shell-page bg-cream text-ink font-sans min-h-screen antialiased flex">
+  <div class="fixed inset-0 -z-10 bg-decor" aria-hidden="true"></div>
+  <div class="fixed inset-0 -z-10 grain" aria-hidden="true"></div>
+  <aside class="app-sidebar">
+    <a href="welcome.html" class="flex items-center gap-2 font-display font-extrabold text-4xl text-ink mb-6">
+      <img src="images/bobasip-logo.png" alt="BobaSip Logo" class="w-16 h-16 object-contain logo-adaptive" />
+      <span>Boba<span class="text-accent">Sip</span></span>
+    </a>
+    <nav class="flex flex-col gap-1 flex-1 overflow-y-auto">
+      <a href="home.html" data-nav="home" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-bold text-ink-soft hover:bg-brown/10 hover:text-brown transition"><i data-lucide="home" class="w-5 h-5"></i> Home</a>
+      <a href="menu.html" data-nav="menu" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-bold text-ink-soft hover:bg-brown/10 hover:text-brown transition"><i data-lucide="cup-soda" class="w-5 h-5"></i> Menu</a>
+      <a href="cart.html" data-nav="cart" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-bold text-ink-soft hover:bg-brown/10 hover:text-brown transition"><i data-lucide="shopping-cart" class="w-5 h-5"></i> Cart</a>
+      <a href="profile.html" data-nav="profile" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-bold text-ink-soft hover:bg-brown/10 hover:text-brown transition"><i data-lucide="user" class="w-5 h-5"></i> Profile</a>
+      <a href="orders.html" data-nav="orders" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-bold text-ink-soft hover:bg-brown/10 hover:text-brown transition"><i data-lucide="receipt" class="w-5 h-5"></i> Orders</a>
+      <a href="addresses.html" data-nav="addresses" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-bold text-ink-soft hover:bg-brown/10 hover:text-brown transition"><i data-lucide="map-pin" class="w-5 h-5"></i> Addresses</a>
+      <a href="payments.html" data-nav="payments" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-bold text-ink-soft hover:bg-brown/10 hover:text-brown transition"><i data-lucide="credit-card" class="w-5 h-5"></i> Payments</a>
+      <a href="notifications.html" data-nav="notifications" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-bold text-ink-soft hover:bg-brown/10 hover:text-brown transition"><i data-lucide="bell" class="w-5 h-5"></i> Notifications</a>
+      <a href="settings.html" data-nav="settings" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-bold text-ink-soft hover:bg-brown/10 hover:text-brown transition"><i data-lucide="settings" class="w-5 h-5"></i> Settings</a>
+    </nav>
+    <a href="profile.html" class="sidebar-profile">
+      <span data-user-avatar class="w-8 h-8 rounded-full bg-brown text-white flex items-center justify-center font-extrabold text-xs">G</span>
+      <div class="flex-1 min-w-0">
+        <div data-user-name-nav class="font-bold text-sm truncate">Guest</div>
+        <div data-i18n="View profile" class="text-[11px] text-ink-muted font-semibold">View profile</div>
+      </div>
+    </a>
+  </aside>
+
+  <main class="flex-1 max-w-5xl mx-auto px-4 sm:px-6 py-6 pb-10 space-y-6">
+    <div>
+      <h1 class="font-display text-2xl sm:text-3xl font-extrabold">Profile</h1>
+      <p class="text-ink-muted font-semibold text-sm mt-1">Manage your account and saved details</p>
+    </div>
+    <div class="bg-white/70 backdrop-blur border border-white/60 rounded-2xl p-5 sm:p-6 shadow-card flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <div class="flex items-center gap-4">
+        <div data-user-avatar class="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-brown text-white flex items-center justify-center font-extrabold text-2xl">G</div>
+        <div>
+          <div data-user-name class="font-display text-xl font-extrabold">Guest</div>
+          <div data-user-email class="text-ink-muted font-semibold text-sm">Not signed in</div>
+        </div>
+      </div>
+      <button type="button" data-logout class="hidden"></button>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 hidden">
+      <a href="orders.html" data-profile-card="orders" class="bg-white/70 backdrop-blur border border-white/60 rounded-2xl p-5 shadow-card hover:shadow-soft hover:-translate-y-0.5 transition block">
+        <div class="flex items-center gap-3"><span class="w-10 h-10 rounded-xl bg-brown/10 text-brown flex items-center justify-center"><i data-lucide="receipt" class="w-5 h-5"></i></span><h3 class="font-display text-lg font-extrabold">Orders</h3></div>
+      </a>
+    </div>
+  </main>
+
+  <div class="toast fixed bottom-24 left-1/2 -translate-x-1/2 translate-y-5 bg-brown-dark text-white px-5 py-3 rounded-full font-bold text-sm opacity-0 transition-all duration-300 z-[60] pointer-events-none shadow-soft"></div>
+  <script src="https://unpkg.com/lucide@0.383.0/dist/umd/lucide.min.js"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/main.js?v=153"></script>
+</body>
+</html>
+
+
+
+
+
+

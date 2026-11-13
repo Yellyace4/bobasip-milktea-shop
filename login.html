@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="color-scheme" content="light dark"><script>(function(){try{var d=localStorage.getItem('bobasip_theme')==='dark';if(d){document.documentElement.classList.add('dark');document.documentElement.style.backgroundColor='#1E1915';}else{document.documentElement.style.backgroundColor='#faf5ec';}}catch(e){}})();</script>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In — BobaSip</title>
+  <link rel="icon" type="image/png" href="/images/bobasip-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=57" />
+</head>
+<body data-page="login" class="user-shell-page bg-cream text-ink font-sans min-h-screen antialiased">
+  <div class="fixed inset-0 -z-10 bg-decor" aria-hidden="true"></div>
+  <div class="fixed inset-0 -z-10 grain" aria-hidden="true"></div>
+  <main class="min-h-screen flex items-center justify-center px-4">
+    <div class="w-full max-w-md bg-white/70 backdrop-blur-xl border border-white/60 rounded-2xl p-5 shadow-card">
+    <div class="text-center mb-3">
+      <img src="images/bobasip-logo.png" alt="BobaSip Logo" class="w-32 h-32 mx-auto mb-2 object-contain logo-adaptive" />
+      <h1 class="font-display text-2xl sm:text-3xl font-extrabold">Slow sips. Good days.</h1>
+    </div>
+    <form id="loginForm" class="space-y-2.5">
+      <div><label class="block text-[11px] font-extrabold tracking-wide text-ink-soft mb-1">EMAIL ADDRESS</label><input id="email" type="email" placeholder="you@example.com" required class="w-full px-4 py-2.5 rounded-xl border border-ink/15 bg-white text-ink font-semibold text-sm focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20" /></div>
+      <div><label class="block text-[11px] font-extrabold tracking-wide text-ink-soft mb-1">PASSWORD</label>
+        <div class="relative">
+          <input id="password" type="password" placeholder="••••••••" required class="w-full px-4 py-2.5 pr-12 rounded-xl border border-ink/15 bg-white text-ink font-semibold text-sm focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20" />
+          <button type="button" data-toggle-pw="password" class="absolute text-ink-muted hover:text-brown transition" style="right:12px; bottom:6px;"><i data-lucide="eye" class="w-6 h-6"></i></button>
+        </div>
+      </div>
+      <button type="submit" class="w-full inline-flex items-center justify-center gap-2 px-5 py-3 mt-2 rounded-xl bg-gradient-to-br from-accent to-brown text-white font-extrabold shadow-soft hover:brightness-105 transition">SIGN IN</button>
+    </form>
+    <p class="text-center mt-3 font-semibold text-xs text-ink-soft"><a href="forgot.html" class="text-accent font-extrabold">Forgot password?</a> · New here? <a href="signup.html" class="text-accent font-extrabold">Create an account</a></p>
+   </div>
+  </main>
+<div class="toast fixed bottom-24 left-1/2 -translate-x-1/2 translate-y-5 bg-brown-dark text-white px-5 py-3 rounded-full font-bold text-sm opacity-0 transition-all duration-300 z-[60] pointer-events-none shadow-soft"></div>
+
+  <script src="https://unpkg.com/lucide@0.383.0/dist/umd/lucide.min.js"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/main.js?v=153"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
